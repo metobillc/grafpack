@@ -5112,6 +5112,7 @@ subroutine test062 ( )
   implicit none
 
   integer ( kind = 4 ), parameter :: nnode = 15
+  integer ( kind = 4 ), parameter :: half_nnode = 7
 
   real ( kind = 8 ) dist
   integer ( kind = 4 ) ido
@@ -5295,7 +5296,7 @@ subroutine test062 ( )
 !
     if ( ido == 1 ) then
  
-      do indx = 1, int ( nnode / 2 )
+      do indx = 1, half_nnode
         call i4_swap ( noder(indx), noder(nnode+1-indx) )
       end do
  
